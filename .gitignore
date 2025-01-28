@@ -1,0 +1,117 @@
+# Logovi - zapisnici aplikacije
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Dijagnostički izvještaji (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Podaci u vrijeme izvođenja
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Direktorij za instrumentirane biblioteke generisane pomoću jscoverage/JSCover
+lib-cov
+
+# Direktorij za pokrivenost koda korišten od strane alata poput Istanbul
+coverage
+*.lcov
+
+# Izlaz za nyc test pokrivenost
+.nyc_output
+
+# Privremena skladišta alata Grunt (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Direktorij za Bower zavisnosti (https://bower.io/)
+bower_components
+
+# Konfiguracija node-waf alata
+.lock-wscript
+
+# Kompajlirani binarni dodaci (https://nodejs.org/api/addons.html)
+build/Release
+
+# Direktoriji za zavisnosti
+node_modules/
+jspm_packages/
+
+# Direktorij za Snowpack zavisnosti (https://snowpack.dev/)
+web_modules/
+
+# Keš datoteke za TypeScript
+*.tsbuildinfo
+
+# Opcionalni npm keš direktorij
+.npm
+
+# Opcionalni eslint keš
+.eslintcache
+
+# Keš za Microbundle
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Opcionalna historija REPL sesije
+.node_repl_history
+
+# Izlaz 'npm pack' komande
+*.tgz
+
+# Datoteka integriteta za Yarn
+.yarn-integrity
+
+# Datoteke sa varijablama okruženja (dotenv)
+.env
+.env.test
+.env.production
+
+# Keš za parcel-bundler (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Izlaz građenja za Next.js
+.next
+out
+
+# Izlaz građenja/generisanja za Nuxt.js
+.nuxt
+dist
+
+# Keš direktorij za Gatsby
+.cache/
+# Ako koristite Gatsby umjesto Next.js, uključite liniju ispod
+# public
+
+# Izlaz građenja za vuepress
+.vuepress/dist
+
+# Direktoriji za Serverless framework
+.serverless/
+
+# Keš za FuseBox
+.fusebox/
+
+# Datoteke za lokalnu DynamoDB
+.dynamodb/
+
+# Datoteka porta za TernJS
+.tern-port
+
+# Verzije VSCode korištene za testiranje ekstenzija
+.vscode-test
+
+# Yarn v2 specifične datoteke
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
