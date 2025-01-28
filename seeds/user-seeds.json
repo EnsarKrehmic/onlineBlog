@@ -1,0 +1,26 @@
+[
+    {
+        "username": "Ensar Krehmić",
+        "email": "admin@onlineblog.com",
+        "password": "admin123",
+        "isAdmin": "true"
+    },
+    {
+        "username": "Narcisa Hadžajlić",
+        "email": "admin1@onlineblog.com",
+        "password": "admin123",
+        "isAdmin": "true"
+    },
+    {
+        "username": "Michael Scofield",
+        "email": "scofield@gmail.com",
+        "password": "11111111",
+        "isAdmin": "false"
+    },
+    {
+        "username": "Kaniel Outis",
+        "email": "outis@gmail.com",
+        "password": "11111111",
+        "isAdmin": "false"
+    }
+]

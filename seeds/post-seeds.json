@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Kako tehnologija mijenja način poslovanja?",
+        "content": "Tehnologija je postala ključni faktor u oblikovanju modernog poslovanja. Digitalizacija i automatizacija omogućile su kompanijama da unaprijede efikasnost, smanje troškove i poboljšaju korisničko iskustvo. Korištenje alata poput umjetničke inteligencije, blockchain tehnologije i interneta stvari (IoT) omogućava preduzećima da uče iz podataka, optimiziraju procese i donose bolje odluke. Ovaj trend nije samo prisutan u velikim korporacijama, već i u malim i srednjim preduzećima koja koriste dostupne tehnologije za konkurentske prednosti.",
+        "author_id": "1"
+    },
+    {
+        "title": "Značaj obrazovanja u digitalnom dobu",
+        "content": "Obrazovanje je temelj svakog društva, a u digitalnom dobu postaje još važniji. Uz razvoj interneta i digitalnih alata, obrazovanje se proširilo izvan tradicionalnih učionica. Online kursevi, tutorijali i edukativni sadržaj dostupni su svakome s pristupom internetu. Ova dostupnost omogućava ljudima svih uzrasta da nadograde svoje vještine, bilo da je riječ o učenju novih jezika, programiranju ili stručnim vještinama. Edukacija je postala ključ za prilagodbu na tržište rada i uspjeh u modernom društvu.",
+        "author_id": "2"
+    },
+    {
+        "title": "Održivi razvoj: Kako možemo pomoći planeti?",
+        "content": "Održivi razvoj odnosi se na takav razvoj koji zadovoljava potrebe sadašnjeg društva, a da pritom ne ugrožava sposobnost budućih generacija da zadovolje svoje potrebe. Globalne promjene, poput klimatskih promjena i zagađenja, predstavljaju ozbiljan izazov. Međutim, postoje mnoge inicijative koje mogu pomoći u zaštiti okoliša, kao što su smanjenje otpada, korištenje obnovljivih izvora energije i odgovorno upravljanje prirodnim resursima. Svaka osoba može doprinositi održivom razvoju kroz male promjene u svakodnevnim navikama.",
+        "author_id": "3"
+    },
+    {
+        "title": "Kako razviti produktivnost u svakodnevnom životu?",
+        "content": "Produktivnost nije samo o tome koliko posla možemo obaviti, već i o tome koliko efikasno i mudro koristimo svoje vrijeme. Postavljanje prioriteta, rad u blokovima vremena i upotreba tehnoloških alata mogu značajno poboljšati produktivnost. Također, važno je održati balans između profesionalnog i privatnog života kako bi se izbjegao burnout. Samodisciplina, organizacija i postavljanje jasnih ciljeva ključevi su za postizanje većih rezultata u kraćem vremenu.",
+        "author_id": "1"
+    },
+    {
+        "title": "Budućnost pametnih gradova i urbanog života",
+        "content": "Pojam pametnih gradova odnosi se na korištenje digitalnih tehnologija za poboljšanje kvalitete života u urbanim sredinama. Pametni gradovi koriste internet stvari (IoT) za upravljanje saobraćajem, energijom, vodovodom, odvozom otpada i drugim gradskim uslugama. Kroz prikupljanje podataka u stvarnom vremenu i korištenje analitike, gradovi mogu postati efikasniji, ekološki prihvatljiviji i sigurniji. S obzirom na ubrzan rast urbanih sredina, pametni gradovi postaju nužnost za održivost globalnih metropola.",
+        "author_id": "4"
+    }
+]
