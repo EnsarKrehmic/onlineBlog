@@ -1,0 +1,1 @@
+// Logika za index još nije specificirana
