@@ -48,30 +48,37 @@ Treba razviti cijelu web aplikaciju prema zadanim instrukcijama koristeći koris
 <hr>
 
 # Platforma za Online Blog
-Ovo je ... 
-Aplikacija omogućava ...
+Ovo je MVC full-stack aplikacija za online blog. Aplikacija omogućava korisnicima, administratorima i gostima pristup različitim funkcijama blog platforme. Koristi Node.js, Express.js, Handlebars.js, MySQL, i Bulma za izradu moderne i responzivne aplikacije.
 
 ## Funkcionalnosti
 ### Za korisnike:
-- 
-- 
-- 
-- 
+- Prikazivanje postojećih blog postova na početnoj stranici.
+- Mogućnost kreiranja korisničkog naloga, prijavljivanja i odjavljivanja.
+- Komentarisanje blog postova (mogućnost brisanja komentara koji pripadaju tom korisniku).
+- Automatska prijava nakon isteka vremena, gdje korisnik mora ponovo da se prijavi za određene akcije (dodavanje, ažuriranje, brisanje, komentari).
 
 ### Za administratore:
-- 
-- 
-- 
-- 
+- Pristup administrativnoj tabli za kreiranje, čitanje, ažuriranje i brisanje blog postova.
+- Mogućnost brisanja komentara korisnika.
 
 ### Za goste:
-- 
-- 
+- Pregled sadržaja bloga bez potrebe za prijavom ili registracijom.
 
 ## Zahtjevi
-- 
-- 
--
-- 
+- Node.js i npm
+- MySQL baza podataka
+- Sequelize.js za ORM
+- Bcrypt za hashiranje lozinki
+- Express-Session i connect-session-sequelize za sesije i kolačiće
+- Bulma CSS za stilizaciju
+- Nodemon za razvojni server
 
 ## Upute za pokretanje
+- Klonirajte ovaj repo na vašem računaru.
+- Pokrenite npm install da instalirate sve potrebne zavisnosti.
+- Kreirajte .env fajl u root-u projekta i unesite svoje podatke za pristup bazi podataka.
+- Ostvarite konekciju baze podataka sa uređivačem
+- Pristupite db/schema.sql fajlu i pokrenite linije koje se tu nalaze
+- Pokrenite npm run seed da generišete tabelu i testne podatke u bazi.
+- Pokrenite server pomoću npm run dev za automatsko restartovanje servera ili npm run start za normalni start.
+- Aplikacija će biti dostupna na http://localhost:3030/
