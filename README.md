@@ -82,3 +82,7 @@ Ovo je MVC full-stack aplikacija za online blog. Aplikacija omogućava korisnici
 - Pokrenite npm run seed da generišete tabelu i testne podatke u bazi.
 - Pokrenite server pomoću npm run dev za automatsko restartovanje servera ili npm run start za normalni start.
 - Aplikacija će biti dostupna na http://localhost:3030/
+
+## Upute za pokretanje
+Seed podaci za pristup stranici kao admin se nalaze unutar /seeds/user-seeds.json fajlu.
+Seed podaci za pristup stranici kao korisnik se nalaze na istoj lokaciji, a moguće je i kreirati nove korisnika!
