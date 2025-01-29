@@ -1,0 +1,90 @@
+<section class="hero has-background-grey-lighter">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <form class="box">
+                        <label class="label is-large" class="label">Kreiraj novi blog post</label>
+                        <div class="field">
+                            <label class="label">Predmet / Naslov</label>
+                            <div class="control">
+                                <input
+                                    type="text"
+                                    placeholder="Unesite naslov posta..."
+                                    class="input subject-input"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <label class="label">Sadržaj</label>
+                                <div class="control">
+                                    <textarea
+                                        class="textarea content-input"
+                                        placeholder="Unesite sadržaj posta..."
+                                        required
+                                    ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-grouped-right mt-3">
+                            <button class="button is-success submit-post">
+                                Kreiraj
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero has-background-grey-lighter hug">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <form class="box">
+                        <table
+                            class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+                        >
+                            <thead>
+                                <tr>
+                                    <th class="table-id">ID</th>
+                                    <th class="table-title">Naslov</th>
+                                    <th class="table-author">Autor</th>
+                                    <th class="table-created">Kreirano</th>
+                                    <th class="table-edit">Izmijeni</th>
+                                    <th class="table-delete">Izbriši</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {{#each posts}}
+                                    <tr>
+                                        <td>{{this.id}}</td>
+                                        <td><a
+                                                href="/post/{{this.id}}"
+                                            >{{this.title}}</a></td>
+                                        <td>{{this.user.username}}</td>
+                                        <td>{{format_time this.createdAt}}</td>
+                                        <td><a
+                                                href="/edit/{{this.id}}"
+                                            >Izmijeni</a></td>
+                                        <td><a
+                                                class="delete-post"
+                                                data-id="{{this.id}}"
+                                            >Izbriši</a></td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/js/dashboard.js"></script>

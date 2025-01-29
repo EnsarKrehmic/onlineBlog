@@ -1,0 +1,44 @@
+<section class="hero has-background-grey-lighter">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <form action="" class="box">
+                        <label class="label is-large" for="" class="label">Izmijeni postojeći blog post</label>
+                        <div class="field">
+                            <label for="" class="label">Predmet / Naslov</label>
+                            <div class="control">
+                                <input
+                                    type="text"
+                                    placeholder="Unesite naslov posta..."
+                                    class="input subject-input"
+                                    value="{{postData.title}}"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <label for="" class="label">Sadržaj</label>
+                                <div class="control">
+                                    <textarea
+                                        class="textarea content-input"
+                                        placeholder="Uneiste sadržaj posta..."
+                                        required
+                                    >{{postData.content}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-grouped-right mt-3">
+                            <button class="button is-success edit-submit">
+                                Izmijeni
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="current-post-id is-invisible">{{postData.id}}</div>
+</section>
+<script src="/js/edit.js"></script>

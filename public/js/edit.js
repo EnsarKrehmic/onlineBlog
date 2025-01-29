@@ -11,7 +11,7 @@ const submitPostHandler = async (event) => {
     // Provjera da li korisnik nije prijavljen
     if (!author_id) {
         alert(
-            "Ne možete objaviti post ako niste prijavljeni. Molimo vas da se odjavite i ponovo prijavite, a zatim pokušajte ponovo."
+            "Ne možete objaviti post ako niste prijavljeni. Molimo vas da se prijavite, a zatim pokušajte ponovo."
         );
     } else {
         // Provjera da li su svi potrebni podaci uneseni

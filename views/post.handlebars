@@ -1,0 +1,86 @@
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8 is-offset-2">
+                    <!-- Slika posta -->
+                    <figure class="image is-16by9">
+                        <img src="../images/softversko-inzenjerstvo-ptf.jpg" alt="placeholder image" />
+                    </figure>
+                </div>
+            </div>
+            <section class="section">
+                <div class="columns">
+                    <div class="column is-8 is-offset-2">
+                        <div class="content is-medium">
+                            <!-- Datum kreiranja posta -->
+                            <h2 class="subtitle is-4">{{format_time postData.createdAt}}</h2>
+                            <!-- Naslov posta -->
+                            <h1 class="title">{{postData.title}}</h1>
+                            <!-- Autor posta -->
+                            <h6>Autor: {{postData.user.username}}</h6>
+                            <!-- Sadržaj posta -->
+                            <p>{{postData.content}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="is-divider"></div>
+            <div class="column is-8 is-offset-2">
+                <!-- Polje za unos komentara -->
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Komentar:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <textarea
+                                    class="textarea comment-input"
+                                    placeholder="Šta mislite o ovom blog postu?"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dugme za slanje komentara -->
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <!-- Ostavljen prazno za razmak -->
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <button
+                                    class="button is-success comment-submit"
+                                >
+                                    Pošaljite
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-8 is-offset-2" id="comment-section">
+                <!-- Prikaz svih komentara -->
+                {{#each postData.comments as |cmt|}}
+                    <article class="message">
+                        <div class="message-body">
+                            {{comment}}
+                            <p class="has-text-right"><strong>-
+                                {{user.username}},
+                                {{format_time createdAt}}</strong>
+                                {{#if (or ../loggedInUserData.isAdmin (eq ../loggedInUserData.id user.id))}}
+                                    (<span class="delete-comment" data-id="{{id}}">Obriši</span>)
+                                {{/if}}
+                            </p>
+                        </div>
+                    </article>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <!-- ID trenutnog posta, sakriven za interno korištenje -->
+    <div class="current-post-id is-invisible">{{postData.id}}</div>
+</section>
+<script src="/js/post.js"></script>

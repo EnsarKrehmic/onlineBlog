@@ -1,21 +1,49 @@
 module.exports = {
-    // Helper metoda 'format_time' uzima timestamp i vraća prilagođeni formatirani string
+    // Helper metoda za formatiranje vremena
     format_time: (date) => {
-        // 'toLocaleDateString()' metoda se koristi za formatiranje vremena sa specifičnim parametrima
-        return date.toLocaleDateString("en-US", {
-            year: "numeric",      // Prikazuje godinu u numeričkom formatu
-            month: "long",        // Prikazuje mjesec u punom nazivu (npr. January)
-            day: "numeric",       // Prikazuje dan u numeričkom formatu
-            hour: "numeric",      // Prikazuje sat u numeričkom formatu
-            minute: "numeric",    // Prikazuje minute u numeričkom formatu
+      if (!date) return "Nepoznato vrijeme";
+      try {
+        const validDate = new Date(date);
+        if (isNaN(validDate)) return "Nevažeći datum";
+        return validDate.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
         });
+      } catch (error) {
+        return "Greška u formatu datuma";
+      }
     },
-    // Funkcija koja skraćuje sadržaj blog posta za početnu stranicu/index
+  
+    // Skraćivanje sadržaja blog posta
     format_summary: (content) => {
-        if (content.length > 300) {  // Provjerava da li je sadržaj duži od 300 karaktera
-            return content.substring(0, 300) + "...";  // Ako je duži, skraćuje na prvih 300 karaktera i dodaje "..."
-        } else {
-            return content;  // Ako nije duži od 300 karaktera, vraća sadržaj nepromijenjen
-        }
+      if (content && content.length > 300) {
+        return content.substring(0, 300) + "...";
+      }
+      return content || "";
     },
-};
+  
+    // Dodavanje formatDate helpera
+    formatDate: (date) => {
+      if (!date) return "";
+      const d = new Date(date);
+      if (isNaN(d)) return "Nevažeći datum";
+      return d.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    },
+  
+    // Univerzalna funkcija za sigurno skraćivanje teksta
+    truncate: (str, len) => {
+      if (typeof str !== "string" || !str) return "";
+      return str.length > len ? str.substring(0, len) + "..." : str;
+    },
+
+    eq: (a, b) => a === b,
+    or: (a, b) => a || b
+  };
+  

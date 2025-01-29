@@ -1,27 +1,27 @@
 [
     {
-        "title": "Kako tehnologija mijenja način poslovanja?",
-        "content": "Tehnologija je postala ključni faktor u oblikovanju modernog poslovanja. Digitalizacija i automatizacija omogućile su kompanijama da unaprijede efikasnost, smanje troškove i poboljšaju korisničko iskustvo. Korištenje alata poput umjetničke inteligencije, blockchain tehnologije i interneta stvari (IoT) omogućava preduzećima da uče iz podataka, optimiziraju procese i donose bolje odluke. Ovaj trend nije samo prisutan u velikim korporacijama, već i u malim i srednjim preduzećima koja koriste dostupne tehnologije za konkurentske prednosti.",
+        "title": "Kako studenti mogu iskoristiti tehnologiju za efikasnije učenje?",
+        "content": "Tehnologija je transformisala način na koji studenti uče i sarađuju. Digitalni alati poput Google Drive-a, Notion-a i aplikacija za vođenje bilješki omogućavaju bolju organizaciju i lakši pristup materijalima. Uz to, online kursevi i video tutorijali pružaju dodatne mogućnosti za učenje izvan tradicionalnih predavanja. Ključno je da studenti pronađu balans između korištenja tehnologije i klasičnih metoda učenja kako bi postigli najbolje rezultate.",
         "author_id": "1"
     },
     {
-        "title": "Značaj obrazovanja u digitalnom dobu",
-        "content": "Obrazovanje je temelj svakog društva, a u digitalnom dobu postaje još važniji. Uz razvoj interneta i digitalnih alata, obrazovanje se proširilo izvan tradicionalnih učionica. Online kursevi, tutorijali i edukativni sadržaj dostupni su svakome s pristupom internetu. Ova dostupnost omogućava ljudima svih uzrasta da nadograde svoje vještine, bilo da je riječ o učenju novih jezika, programiranju ili stručnim vještinama. Edukacija je postala ključ za prilagodbu na tržište rada i uspjeh u modernom društvu.",
+        "title": "Najtraženije IT vještine za studente tehničkih fakulteta",
+        "content": "U današnjem digitalnom dobu, posjedovanje pravih IT vještina može studentima otvoriti mnoga vrata. Programiranje (JavaScript, Python, Java), rad s bazama podataka, poznavanje cloud tehnologija i osnova kibernetičke sigurnosti su samo neke od ključnih vještina koje poslodavci traže. Studenti Politehničkog fakulteta trebaju iskoristiti dostupne resurse kako bi se specijalizirali u oblastima koje ih zanimaju i povećali svoje šanse za zapošljavanje.",
         "author_id": "2"
     },
     {
-        "title": "Održivi razvoj: Kako možemo pomoći planeti?",
-        "content": "Održivi razvoj odnosi se na takav razvoj koji zadovoljava potrebe sadašnjeg društva, a da pritom ne ugrožava sposobnost budućih generacija da zadovolje svoje potrebe. Globalne promjene, poput klimatskih promjena i zagađenja, predstavljaju ozbiljan izazov. Međutim, postoje mnoge inicijative koje mogu pomoći u zaštiti okoliša, kao što su smanjenje otpada, korištenje obnovljivih izvora energije i odgovorno upravljanje prirodnim resursima. Svaka osoba može doprinositi održivom razvoju kroz male promjene u svakodnevnim navikama.",
-        "author_id": "3"
-    },
-    {
-        "title": "Kako razviti produktivnost u svakodnevnom životu?",
-        "content": "Produktivnost nije samo o tome koliko posla možemo obaviti, već i o tome koliko efikasno i mudro koristimo svoje vrijeme. Postavljanje prioriteta, rad u blokovima vremena i upotreba tehnoloških alata mogu značajno poboljšati produktivnost. Također, važno je održati balans između profesionalnog i privatnog života kako bi se izbjegao burnout. Samodisciplina, organizacija i postavljanje jasnih ciljeva ključevi su za postizanje većih rezultata u kraćem vremenu.",
+        "title": "Savjeti za uspješno polaganje ispita na tehničkim fakultetima",
+        "content": "Politehnički fakulteti često zahtijevaju drugačiji pristup učenju zbog tehničke prirode predmeta. Ključne strategije uključuju redovno prisustvovanje predavanjima, kreiranje kvalitetnih bilješki, rješavanje prošlih ispita i grupno učenje. Također, važno je voditi računa o vremenskom menadžmentu kako bi se osiguralo dovoljno vremena za pripremu svakog ispita. Mentalna priprema i zdrave navike također igraju veliku ulogu u akademskom uspjehu.",
         "author_id": "1"
     },
     {
-        "title": "Budućnost pametnih gradova i urbanog života",
-        "content": "Pojam pametnih gradova odnosi se na korištenje digitalnih tehnologija za poboljšanje kvalitete života u urbanim sredinama. Pametni gradovi koriste internet stvari (IoT) za upravljanje saobraćajem, energijom, vodovodom, odvozom otpada i drugim gradskim uslugama. Kroz prikupljanje podataka u stvarnom vremenu i korištenje analitike, gradovi mogu postati efikasniji, ekološki prihvatljiviji i sigurniji. S obzirom na ubrzan rast urbanih sredina, pametni gradovi postaju nužnost za održivost globalnih metropola.",
-        "author_id": "4"
+        "title": "Kako pronaći praksu ili posao u IT industriji tokom studija?",
+        "content": "Studiranje na tehničkom fakultetu otvara brojne prilike za praksu i zapošljavanje u IT sektoru. Ključno je razviti jak portfolio, učestvovati u open-source projektima i redovno ažurirati LinkedIn profil. Networking putem studentskih konferencija, hackathona i meetupa može značajno pomoći u pronalasku prilika. Također, mnoge kompanije nude prakse za studente koji žele steći praktično iskustvo prije završetka studija.",
+        "author_id": "2"
+    },
+    {
+        "title": "Najbolji resursi za učenje programiranja za studente",
+        "content": "Učenje programiranja nikada nije bilo dostupnije zahvaljujući brojnim online resursima. Platforme poput FreeCodeCamp, Codecademy, Udemy i Coursera nude kurseve za početnike i napredne studente. GitHub i Stack Overflow su neprocjenjivi alati za razvijanje rješenja i učenje iz zajednice. Ključno je postaviti jasne ciljeve, vježbati kroz projekte i kontinuirano učiti kako bi se steklo potrebno iskustvo u programiranju.",
+        "author_id": "1"
     }
 ]

@@ -1,13 +1,13 @@
 [
     {
         "username": "Ensar Krehmić",
-        "email": "admin@onlineblog.com",
+        "email": "admin@studenthub.com",
         "password": "admin123",
         "isAdmin": "true"
     },
     {
         "username": "Narcisa Hadžajlić",
-        "email": "admin1@onlineblog.com",
+        "email": "admin1@studenthub.com",
         "password": "admin123",
         "isAdmin": "true"
     },

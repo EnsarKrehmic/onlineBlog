@@ -21,4 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Page Loader
+    window.addEventListener('load', () => {
+        document.getElementById('page-loader').style.display = 'none';
+    });
+
+    // Scroll Animations
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.animate-fadeInUp');
+        elements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const elementBottom = el.getBoundingClientRect().bottom;
+            
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                el.style.opacity = '1';
+                el.style.animation = 'fadeInUp 0.6s ease-out forwards';
+            }
+        });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
 });

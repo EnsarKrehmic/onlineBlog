@@ -1,6 +1,6 @@
 // Funkcija za slanje komentara na server (API)
 const submitCommentHandler = async (event) => {
-    event.preventDefault(); // Sprečava podrazumevano ponašanje forme
+    event.preventDefault(); // Sprečava podrazumijevano ponašanje forme
 
     // Uzimanje komentara, ID-a korisnika i ID-a posta sa stranice
     const comment = document.querySelector(".comment-input").value.trim();
@@ -37,3 +37,42 @@ const submitCommentHandler = async (event) => {
         }
     }
 };
+
+// Funkcija za beisanje komentara na server (API)
+const deleteCommentHandler = async (event) => {
+    event.preventDefault(); // Sprečava podrazumijevano ponašanje forme
+
+    const deleteCommentId = event.target.getAttribute("data-id");
+    const currentPostId = document.querySelector(".current-post-id").innerHTML;
+    console.log(2);
+
+    // Provjera da li je komentar obrisan
+    if (deleteCommentId) {
+        const response = await fetch("/api/comment/" + deleteCommentId, {
+            method: "DELETE", // HTTP metoda DELETE
+            headers: { "Content-Type": "application/json" },
+        });
+        if (response.ok) {
+            document.location.replace(
+                "/post/" + currentPostId + "#comment-section"
+            );
+            document.location.reload();
+        } else {
+            alert(
+                "Neuspješno brisanje komentara. " +
+                    response.status +
+                    ": " +
+                    response.statusText
+            );
+        }
+    }
+};
+
+document
+    .querySelector(".comment-submit")
+    .addEventListener("click", submitCommentHandler);
+
+const deleteLinks = document.querySelectorAll(".delete-comment");
+deleteLinks.forEach((el) =>
+    el.addEventListener("click", (event) => deleteCommentHandler(event))
+);

@@ -1,0 +1,66 @@
+<section class="hero has-background-grey-lighter is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10-tablet is-8-desktop is-6-widescreen">
+                    <!-- Forma za prijavu korisnika -->
+                    <form class="box" action="/login" method="POST">
+                    <!-- Polje za unos email-a -->
+                        <div class="field">
+                            <label class="label" for="email">Email</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    id="email"
+                                    type="email"
+                                    placeholder="Unesite Vaš email"
+                                    class="input username-input"
+                                    required
+                                    autocomplete="off"
+                                />
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </div>
+                            <!-- Prikazivanje greške za email ako postoji -->
+                            {{#if errors.email}}
+                                <p class="help is-danger">{{errors.email}}</p>
+                            {{/if}}
+                        </div>
+                        <div class="field">
+                            <label class="label" for="password">Lozinka</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    id="password"
+                                    type="password"
+                                    placeholder="*******"
+                                    class="input password-input"
+                                    required
+                                    autocomplete="off"
+                                />
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </div>
+                            <!-- Prikazivanje greške za lozinku ako postoji -->
+                            {{#if errors.password}}
+                                <p class="help is-danger">{{errors.password}}</p>
+                            {{/if}}
+                        </div>
+                        <!-- Dugme za prijavu -->
+                        <div class="field">
+                            <button class="button is-success is-fullwidth login-button" type="submit">
+                                Prijava
+                            </button>
+                        </div>
+                        <div class="field">
+                            <p class="has-text-centered">
+                                Nemate račun? <a href="/signup/">Napravite ga ovdje!</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/login.js"></script>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>StudentHub Blog</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bulma CSS (latest version) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <!-- Font Awesome -->
+    <link 
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+      crossorigin="anonymous" 
+    />
+    <link rel="stylesheet" href="/css/bulma-divider.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<!-- Navbar Section -->
+<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-white has-text-weight-bold" href="/">
+        StudentHub
+      </a>
+      <span class="navbar-burger" data-target="navbarMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu is-active">
+      <div class="navbar-start"></div> <!-- Pražan div za centriranje -->
+
+      <div class="navbar-center">
+        <a class="navbar-item" href="/">
+          <img src="../images/logo.png" alt="Početna" style="max-height: 50px;">
+        </a>
+      </div>
+
+      <div class="navbar-end is-align-items-center">
+        {{#if loggedIn}}
+          {{#if loggedInUserData.isAdmin}}
+            <a class="navbar-item button is-primary is-outlined" href="/dashboard">
+              Administracija
+            </a>
+          {{/if}}
+          <a class="navbar-item button is-warning is-outlined" href="/logout/">
+            <strong>Odjava</strong>
+          </a>
+          {{else}}
+            <a class="navbar-item button is-dark is-outlined" href="/login/">
+              <strong>Prijava</strong>
+            </a>
+            <a class="navbar-item button is-dark is-outlined" href="/signup/">
+              <strong>Registracija</strong>
+            </a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero is-medium has-background-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/ptf-lab.jpg');">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 has-text-white mb-4 animate-fade-in">
+        Dobrodošli na StudentHub blog platformu
+      </h1>
+      <h2 class="subtitle is-4 has-text-light">
+        Budite u toku sa najnovijim vijestima i mišljenjima
+      </h2>
+      {{#unless loggedIn}}
+      <a href="/signup" class="button is-primary is-large mt-4 animate-bounce">
+        <span>Pridružite se</span>
+        <span class="icon">
+          <i class="fa fa-arrow-right"></i>
+        </span>
+      </a>
+      {{/unless}}
+    </div>
+  </div>
+</section>
+
+{{{body}}}
+
+<!-- Footer Section -->
+<footer class="footer is-dark">
+    <div class="container">
+        <div class="columns is-multiline">
+            <div class="column is-4">
+                <h4 class="title is-5">StudentHub Blog</h4>
+                <p>Platforma za informisanje o najnovijim vijestima i mišljenjima.</p>
+            </div>
+            <div class="column is-4">
+                <h4 class="title is-5">Kontakt</h4>
+                <ul>
+                    <li>Email: info@onlineblog.com</li>
+                    <li>Adresa: Zenica, BiH</li>
+                </ul>
+            </div>
+            <div class="column is-4">
+                <h4 class="title is-5">Društvene mreže</h4>
+                <div class="social-links">
+                    <a class="icon" href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="icon" href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="icon" href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content has-text-centered">
+            <p class="has-text-grey">
+                &copy; 2025 StudentHub Blog. <a
+                        href="https://github.com/EnsarKrehmic/onlineBlog"
+                        target="_blank"
+                    >Open Source Code</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

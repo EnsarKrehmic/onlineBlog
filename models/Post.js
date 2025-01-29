@@ -26,7 +26,7 @@ Post.init(
         content: {
             type: DataTypes.STRING(10000),  // Tip podataka je string sa maksimalnom dužinom 10,000 karaktera
             allowNull: false,              // Sadržaj ne može biti null
-        },
+        },       
         // Definicija kolone 'author_id' (ID autora objave), povezuje se sa korisnicima
         author_id: {
             type: DataTypes.INTEGER,   // Tip podataka je cijeli broj

@@ -1,0 +1,88 @@
+<section class="hero has-background-grey-lighter is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10-tablet is-8-desktop is-6-widescreen">
+                    <!-- Forma za registraciju korisnika -->
+                    <form class="box" action="/signup" method="POST">
+                        <!-- Polje za unos korisničkog imena -->
+                        <div class="field">
+                            <label class="label">Korisničko ime</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    type="text"
+                                    name="username"
+                                    placeholder="Unesite Vaš username"
+                                    class="input username-input"
+                                    required
+                                />
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                            </div>
+                            <!-- Prikazivanje greške za korisničko ime ako postoji -->
+                            {{#if errors.username}}
+                                <p class="help is-danger">{{errors.username}}</p>
+                            {{/if}}
+                        </div>
+                        
+                        <!-- Polje za unos email-a -->
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Unesite Vaš email"
+                                    class="input email-input"
+                                    required
+                                />
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </div>
+                            <!-- Prikazivanje greške za email ako postoji -->
+                            {{#if errors.email}}
+                                <p class="help is-danger">{{errors.email}}</p>
+                            {{/if}}
+                        </div>
+                        
+                        <!-- Polje za unos lozinke -->
+                        <div class="field">
+                            <label class="label">Lozinka</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    type="password"
+                                    name="password"
+                                    placeholder="******* (minimalno 6 karaktera)"
+                                    class="input password-input"
+                                    required
+                                />
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </div>
+                            <!-- Prikazivanje greške za lozinku ako postoji -->
+                            {{#if errors.password}}
+                                <p class="help is-danger">{{errors.password}}</p>
+                            {{/if}}
+                        </div>
+                        
+                        <!-- Dugme za registraciju -->
+                        <div class="field">
+                            <button class="button is-success is-fullwidth signup-button" type="submit">
+                                Registruj se
+                            </button>
+                        </div>
+                        <div class="field">
+                            <p class="has-text-centered">
+                                Imate račun? <a href="/login/">Prijavite se ovdje!</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/signup.js"></script>

@@ -10,7 +10,7 @@ const logout = async () => {
         // Provjera da li je zahtjev uspješan
         if (!response.ok) {
             // Ako je status odgovora različit od 200, obavještavamo korisnika o grešci
-            alert("Neuspješna odjava.");
+            alert("Uspješna odjava.");
         } else {
             // Ako je odjava uspješna, preusmjeravamo korisnika na stranicu prijave
             document.location.replace("/login");
