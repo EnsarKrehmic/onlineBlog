@@ -76,7 +76,7 @@ Ovo je MVC full-stack aplikacija za online blog. Aplikacija omogućava korisnici
 ## Upute za pokretanje
 - Klonirajte ovaj repo na vašem računaru.
 - Pokrenite npm install da instalirate sve potrebne zavisnosti.
-- Kreirajte .env fajl u root-u projekta i unesite svoje podatke za pristup bazi podataka.
+- Promijenite naziv .env.example fajla u .env i unesite Vaše podatke za pristup bazi podataka.
 - Ostvarite konekciju baze podataka sa uređivačem
 - Pristupite db/schema.sql fajlu i pokrenite linije koje se tu nalaze
 - Pokrenite npm run seed da generišete tabelu i testne podatke u bazi.
