@@ -19,7 +19,7 @@ helpers.truncate = function (str, len) {
 
 // Inicijalizacija Express aplikacije
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3030;
 
 // Konfiguracija sesija
 const sess = {
