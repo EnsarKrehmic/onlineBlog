@@ -7,21 +7,16 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector(".password-input").value.trim();
 
     if (email && password) {
-        try {
-            const response = await fetch("/api/user/login", {
-                method: "POST",
-                body: JSON.stringify({ email, password }),
-                headers: { "Content-Type": "application/json" },
-            });
+        const response = await fetch("/api/user/login", {
+            method: "POST",
+            body: JSON.stringify({ email, password }),
+            headers: { "Content-Type": "application/json" },
+        });
 
-            if (response.ok) {
-                document.location.replace("/"); // Preusmjeravanje ako je uspješno
-            } else {
-                alert("Neuspješna prijava: " + response.statusText);
-            }
-        } catch (err) {
-            console.error("Greška:", err);
-            alert("Došlo je do greške pri prijavi.");
+        if (response.ok) {
+            document.location.replace("/"); // Preusmjeravanje ako je uspješno
+        } else {
+            alert("Neuspješna prijava: " + response.statusText);
         }
     } else {
         alert("Molimo vas da popunite sva polja.");

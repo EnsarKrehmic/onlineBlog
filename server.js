@@ -8,6 +8,9 @@ const sequelize = require("./config/connection");
 const controllers = require("./controllers");
 const helpers = require("./utils/helpers");
 
+// Postavljanje Handlebars templating engine-a sa prilagođenim helperima
+const handlebars = expressHandlebars.create({ helpers });
+
 // Dodavanje vlastitog Handlebars helpera
 helpers.truncate = function (str, len) {
     // Provjera da li je `str` definisan i da li je tip string
@@ -19,7 +22,7 @@ helpers.truncate = function (str, len) {
 
 // Inicijalizacija Express aplikacije
 const app = express();
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3000;
 
 // Konfiguracija sesija
 const sess = {
@@ -33,8 +36,7 @@ const sess = {
 // Primjena sesije na Express aplikaciju
 app.use(session(sess));
 
-// Postavljanje Handlebars templating engine-a sa prilagođenim helperima
-const handlebars = expressHandlebars.create({ helpers });
+
 app.engine("handlebars", handlebars.engine);
 app.set("view engine", "handlebars");
 

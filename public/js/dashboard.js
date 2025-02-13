@@ -5,7 +5,7 @@ const submitPostHandler = async (event) => {
     // Dohvatanje vrijednosti unesenih u polja za naslov i sadržaj posta
     const title = document.querySelector(".subject-input").value.trim();
     const content = document.querySelector(".content-input").value.trim();
-    const author_id = document.querySelector(".logged-in-user-id").innerHTML;  // ID prijavljenog korisnika
+    const author_id = document.querySelector(".logged-in-user-id").innerHTML; //need id of logged in user
 
     // Provjera da li je korisnik prijavljen
     if (!author_id) {
@@ -15,29 +15,23 @@ const submitPostHandler = async (event) => {
     } else {
         // Provjera da li su svi potrebni podaci uneseni (naslov i sadržaj)
         if (title && content) {
-            try {
-                // Slanje POST zahtjeva za kreiranje novog posta
-                const response = await fetch("/api/post/", {
-                    method: "POST",  // Metoda zahtjeva je POST jer kreiramo novi post
-                    body: JSON.stringify({ title, content, author_id }),  // Telo zahtjeva sa podacima
-                    headers: { "Content-Type": "application/json" },  // Zaglavlje koje označava JSON format
-                });
+            // Slanje POST zahtjeva za kreiranje novog posta
+            const response = await fetch("/api/post/", {
+                method: "POST",  // Metoda zahtjeva je POST jer kreiramo novi post
+                body: JSON.stringify({ title, content, author_id }),  // Telo zahtjeva sa podacima
+                headers: { "Content-Type": "application/json" },  // Zaglavlje koje označava JSON format
+            });
 
-                // Provjera da li je odgovor uspješan (status 200)
-                if (response.ok) {
-                    document.location.replace("/dashboard");  // Preusmjeravanje na dashboard
-                } else {
-                    alert(
-                        "Neuspješno slanje posta. " +
-                            response.status +
-                            ": " +
-                            response.statusText
-                    );
-                }
-            } catch (err) {
-                // U slučaju greške prilikom slanja zahtjeva, obavještavamo korisnika
-                console.error("Greška pri slanju posta:", err);
-                alert("Došlo je do greške pri slanju posta.");
+            // Provjera da li je odgovor uspješan (status 200)
+            if (response.ok) {
+                document.location.replace("/dashboard");  // Preusmjeravanje na dashboard
+            } else {
+                alert(
+                    "Neuspješno slanje posta. " +
+                        response.status +
+                        ": " +
+                        response.statusText
+                );
             }
         } else {
             alert("Molimo vas da popunite sva polja.");

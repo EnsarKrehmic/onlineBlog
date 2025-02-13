@@ -16,31 +16,25 @@ const submitPostHandler = async (event) => {
     } else {
         // Provjera da li su svi potrebni podaci uneseni
         if (title && content) {
-            try {
-                // Slanje PUT zahtjeva za ažuriranje posta sa novim podacima
-                const response = await fetch("/api/post/" + post_id, {
-                    method: "PUT",  // Metoda zahtjeva je PUT jer ažuriramo postojeći post
-                    body: JSON.stringify({ title, content, author_id }),  // Telo zahtjeva s novim podacima
-                    headers: { "Content-Type": "application/json" },  // Zaglavlje koje označava JSON format
-                });
+            // Slanje PUT zahtjeva za ažuriranje posta sa novim podacima
+            const response = await fetch("/api/post/" + post_id, {
+                method: "PUT",  // Metoda zahtjeva je PUT jer ažuriramo postojeći post
+                body: JSON.stringify({ title, content, author_id }),  // Telo zahtjeva s novim podacima
+                headers: { "Content-Type": "application/json" },  // Zaglavlje koje označava JSON format
+            });
 
-                // Provjera da li je odgovor uspješan (status 200)
-                if (response.ok) {
-                    // Preusmjeravanje korisnika na stranicu sa svim postovima (npr. dashboard)
-                    document.location.replace("/dashboard");
-                } else {
-                    // Ako ažuriranje nije uspjelo, obavještavamo korisnika o grešci
-                    alert(
-                        "Neuspješno ažuriranje posta. " +
-                            response.status +
-                            ": " +
-                            response.statusText
-                    );
-                }
-            } catch (err) {
-                // U slučaju greške prilikom slanja zahtjeva, obavještavamo korisnika
-                console.error("Greška pri ažuriranju posta:", err);
-                alert("Došlo je do greške pri ažuriranju posta.");
+            // Provjera da li je odgovor uspješan (status 200)
+            if (response.ok) {
+                // Preusmjeravanje korisnika na stranicu sa svim postovima (npr. dashboard)
+                document.location.replace("/dashboard");
+            } else {
+                // Ako ažuriranje nije uspjelo, obavještavamo korisnika o grešci
+                alert(
+                    "Neuspješno ažuriranje posta. " +
+                        response.status +
+                        ": " +
+                        response.statusText
+                );
             }
         } else {
             // Ako nisu popunjena sva polja, obavještavamo korisnika

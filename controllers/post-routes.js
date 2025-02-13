@@ -53,36 +53,5 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-// Dohvaćanje svih postova sa autorima i komentarima
-router.get("/", async (req, res) => {
-    try {
-        const postData = await Post.findAll({
-            include: [
-                {
-                    model: User, // Informacije o autoru posta
-                    attributes: ["username"],
-                },
-                {
-                    model: Comment, // Broj komentara
-                },
-            ],
-            order: [["createdAt", "DESC"]],
-        });
-
-        // Pretvaranje u čisti JavaScript objekat
-        const posts = postData.map((post) => post.get({ plain: true }));
-
-        // Renderovanje početne stranice
-        res.render("index", {
-            loggedIn: req.session.loggedIn,
-            loggedInUserData: req.session.loggedInUserData,
-            posts, // Prosljeđivanje podataka o postovima
-        });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
 // Eksportovanje rute kako bi bila dostupna u drugim dijelovima aplikacije
 module.exports = router;
